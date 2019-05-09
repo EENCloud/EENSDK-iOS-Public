@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.description      = 'An FLV player designed specifically to play files from EagleEye Networks .'
   s.homepage         = 'https://github.com/EENCloud/EENSDK-iOS-Public/'
   s.author           = { 'Greg Slomin' => 'gslomin@eagleeyenetworks.com' }
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '10.0'
 
   s.source = {
     :http => 'https://github.com/EENCloud/EENSDK-iOS-Public/blob/master/EENSDK-iOS/1.0.0/EENSDK_iOS.zip?raw=true'
