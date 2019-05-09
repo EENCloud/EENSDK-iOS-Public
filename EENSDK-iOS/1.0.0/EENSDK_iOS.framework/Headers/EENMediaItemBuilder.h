@@ -26,15 +26,15 @@ NS_ASSUME_NONNULL_BEGIN
  @abstract
     Creates builder instance for live item.
  @param
-    esn
-    Esn of camera in system.
+    cameraId
+    Camera Id of camera in system.
  @param
     baseUrl
     Base url of end point.
  @result
     EENMediaItemBuilder instance to be used for EENMediaItem instance building.
  */
-+ (EENMediaItemBuilder *)builderForLiveItem:(NSString *)esn baseUrl:(NSString *)baseUrl;
++ (EENMediaItemBuilder *)builderForLiveItem:(NSString *)cameraId baseUrl:(NSString *)baseUrl;
 
 /*!
  @method
@@ -42,8 +42,8 @@ NS_ASSUME_NONNULL_BEGIN
  @abstract
     Creates builder instance for hostorical item.
  @param
-    esn
-    Esn of camera in system.
+ 	cameraId
+ 	Camera Id of camera in system.
  @param
     baseUrl
     Base url of end point.
@@ -56,11 +56,24 @@ NS_ASSUME_NONNULL_BEGIN
  @result
     EENMediaItemBuilder instance to be used for EENMediaItem instance building.
  */
-+ (EENMediaItemBuilder *)builderForHistoricalItem:(NSString *)esn baseUrl:(NSString *)baseUrl startDate:(NSDate *)startDate endDate:(NSDate *)endDate;
++ (EENMediaItemBuilder *)builderForHistoricalItem:(NSString *)cameraId baseUrl:(NSString *)baseUrl startDate:(NSDate *)startDate endDate:(NSDate *)endDate;
 
 /*!
  @method
-    addTitle:
+ 	setApiKey:
+ @abstract
+ 	Configures the builder with a provided API key. Will override previously set value.
+ @param
+ 	apiKey
+ 	Api key to set at MediaItem instance while building it.
+ @result
+ 	Reference to EENMediaItemBuilder instance itself (to be used for message chaining).
+ */
+- (EENMediaItemBuilder *)setApiKey:(NSString *)apiKey;
+
+/*!
+ @method
+    setTitle:
  @abstract
     Configures builder with custom title. Will override previously added title.
  @param
@@ -69,11 +82,11 @@ NS_ASSUME_NONNULL_BEGIN
  @result
     Reference to EENMediaItemBuilder instance itself (to be used for message chaining).
  */
-- (EENMediaItemBuilder *)addTitle:(NSString *)title;
+- (EENMediaItemBuilder *)setTitle:(NSString *)title;
 
 /*!
  @method
-    addDateFormat:
+    setDateFormat:
  @abstract
     Configures builder with custom date format. Will override previously added data format.
  @param
@@ -82,11 +95,11 @@ NS_ASSUME_NONNULL_BEGIN
  @result
     Reference to EENMediaItemBuilder instance itself (to be used for message chaining).
  */
-- (EENMediaItemBuilder *)addDateFormat:(NSString *)dateFormat;
+- (EENMediaItemBuilder *)setDateFormat:(NSString *)dateFormat;
 
 /*!
  @method
-    addTimeZone:
+    setTimeZone:
  @abstract
     Configures builder with custom time zone. Will override previously added time zone.
  @param
@@ -95,7 +108,7 @@ NS_ASSUME_NONNULL_BEGIN
  @result
     Reference to EENMediaItemBuilder instance itself (to be used for message chaining).
  */
-- (EENMediaItemBuilder *)addTimeZone:(NSTimeZone *)timeZone;
+- (EENMediaItemBuilder *)setTimeZone:(NSTimeZone *)timeZone;
 
 /*!
  @method

@@ -21,25 +21,33 @@ NS_ASSUME_NONNULL_BEGIN
 
 /*!
  @property
-    esn
+ 	cameraId
  @abstract
-    Indicates esn of media item.
+ 	Represents the camera ID.
  */
-@property (readonly) NSString *esn;
+@property (readonly) NSString *cameraId;
 
 /*!
  @property
-    baseUrl
+ 	baseUrl
  @abstract
-    Indicates base url of media item.
+ 	Represents the base URL of the video stream.
  */
 @property (readonly) NSString *baseUrl;
 
 /*!
  @property
+ 	apiKey
+ @abstract
+ 	Represents the API key of the authorized user.
+ */
+@property (readonly) NSString *apiKey;
+
+/*!
+ @property
     title
  @abstract
-    Indicates title being presented at navigation bar.
+    Represents the title being shown in navigation bar.
  */
 @property (readonly) NSString *title;
 
@@ -47,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
  @property
     startDate
  @abstract
-    Indicates start date of media item in Greenwich time (GMT+0). Will be nil for item representing live stream.
+    Represents the start date of the stream in Greenwich time (GMT+0). Will be nil for the item representing live stream.
  */
 @property (readonly) NSDate *startDate;
 
@@ -55,15 +63,15 @@ NS_ASSUME_NONNULL_BEGIN
  @property
     endDate
  @abstract
-    Indicates end date of media item in Greenwich time (GMT+0). Will be nil for item representing live stream.
+    Represents the end date of the stream in Greenwich time (GMT+0). Will be nil for the item representing live stream.
  */
 @property (readonly) NSDate *endDate;
 
 /*!
  @property
-    dateFormat
+ 	dateFormat
  @abstract
-    Indicates date format of current playback time being presented at navigation bar.
+ 	Represents the date format of the current playback time being shown in navigation bar.
  */
 @property (readonly) NSString *dateFormat;
 
@@ -71,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
  @property
     timeZone
  @abstract
-    Indicates time zone of current playback time being presented at navigation bar.
+    Represents the time zone of the current playback time being shown in navigation bar.
  */
 @property (readonly) NSTimeZone *timeZone;
 
