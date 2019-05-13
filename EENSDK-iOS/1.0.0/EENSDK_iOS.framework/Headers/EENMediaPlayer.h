@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "EENMediaItem.h"
 #import "EENMediaMetadata.h"
-#import <EENSDK_iOS/EENSDK_iOS-Swift.h>
+
+@class EENSDKError;
 
 NS_ASSUME_NONNULL_BEGIN
 
