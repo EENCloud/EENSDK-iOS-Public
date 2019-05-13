@@ -166,6 +166,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import ObjectiveC;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -182,6 +183,36 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="EENSDK_iOS",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+enum EENSDKErrorCode : NSInteger;
+
+/// Class which represents error. Contains error code number, general and detail message strings.
+SWIFT_CLASS("_TtC10EENSDK_iOS11EENSDKError")
+@interface EENSDKError : NSObject
+@property (nonatomic, readonly) enum EENSDKErrorCode code;
+@property (nonatomic, readonly, copy) NSString * _Nonnull generalMessage;
+@property (nonatomic, readonly, copy) NSString * _Nullable detailMessage;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, EENSDKErrorCode, closed) {
+/// <ul>
+///   <li>
+///     To be used when a problem occurs that the client is not responsible for. Examples are Databases being offline,
+///   </li>
+///   <li>
+///     programming errors or capacity overloads of servers.
+///   </li>
+/// </ul>
+  EENSDKErrorCodeInternalError = 1,
+/// <ul>
+///   <li>
+///     To be thrown when the request needs authentication, but is missing (valid) authentication credentials.
+///   </li>
+/// </ul>
+  EENSDKErrorCodeAuthenticationError = 2,
+};
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

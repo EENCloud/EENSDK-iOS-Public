@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EENMediaItem.h"
 #import "EENMediaMetadata.h"
+#import <EENSDK_iOS/EENSDK_iOS-Swift.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -196,7 +197,7 @@ typedef enum : NSUInteger {
  @abstract
     If status is failed, this property indicates the error that caused the failure.
  */
-@property (readonly) NSError *failureReason;
+@property (readonly) EENSDKError *failureReason;
 
 /*!
  @property

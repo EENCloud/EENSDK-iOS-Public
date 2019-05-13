@@ -69,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
  @result
  	Reference to EENMediaItemBuilder instance itself (to be used for message chaining).
  */
-- (EENMediaItemBuilder *)setApiKey:(NSString *)apiKey;
+- (EENMediaItemBuilder *)setApiKey:(NSString * _Nonnull)apiKey;
 
 /*!
  @method
@@ -82,7 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
  @result
     Reference to EENMediaItemBuilder instance itself (to be used for message chaining).
  */
-- (EENMediaItemBuilder *)setTitle:(NSString *)title;
+- (EENMediaItemBuilder *)setTitle:(NSString * _Nullable)title;
 
 /*!
  @method
@@ -95,7 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
  @result
     Reference to EENMediaItemBuilder instance itself (to be used for message chaining).
  */
-- (EENMediaItemBuilder *)setDateFormat:(NSString *)dateFormat;
+- (EENMediaItemBuilder *)setDateFormat:(NSString * _Nullable)dateFormat;
 
 /*!
  @method
@@ -108,7 +108,7 @@ NS_ASSUME_NONNULL_BEGIN
  @result
     Reference to EENMediaItemBuilder instance itself (to be used for message chaining).
  */
-- (EENMediaItemBuilder *)setTimeZone:(NSTimeZone *)timeZone;
+- (EENMediaItemBuilder *)setTimeZone:(NSTimeZone * _Nullable)timeZone;
 
 /*!
  @method
