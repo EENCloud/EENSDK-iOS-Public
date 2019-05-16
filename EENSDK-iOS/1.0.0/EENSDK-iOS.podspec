@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
 
   s.source = {
-    :http => 'https://github.com/EENCloud/EENSDK-iOS-Public/tree/master/EENSDK-iOS/1.0.0/EENSDK_iOS.framework'
+  	:http => 'https://github.com/EENCloud/EENSDK-iOS-Public/blob/master/EENSDK-iOS/1.0.0/EENSDK_iOS.zip?raw=true'
   }
   s.vendored_frameworks = 'EENSDK_iOS.framework'
 end
