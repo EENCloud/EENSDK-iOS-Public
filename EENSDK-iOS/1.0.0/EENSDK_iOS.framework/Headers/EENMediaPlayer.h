@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
     EENMediaPlayerStatusFailed
     Indicates that the player can no longer play MediaItem instance because of an error. The error is described by the value of the failureReason property.
  */
-typedef enum : NSUInteger {
+typedef NS_ENUM(NSInteger) {
     EENMediaPlayerStatusUnknown,
     EENMediaPlayerStatusReadyToPlay,
     EENMediaPlayerStatusFailed,
@@ -50,7 +50,7 @@ typedef enum : NSUInteger {
     EENMediaPlayerPlaybackStatePlaying
     In this state, playback is currently progressing. Should playback stall because of insufficient media data, playbackState will change to buffering.
  */
-typedef enum : NSUInteger {
+typedef NS_ENUM(NSInteger) {
     EENMediaPlayerPlaybackStatePaused,
     EENMediaPlayerPlaybackStateBuffering,
     EENMediaPlayerPlaybackStatePlaying,
