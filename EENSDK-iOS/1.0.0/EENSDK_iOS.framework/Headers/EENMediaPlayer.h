@@ -160,11 +160,42 @@ typedef NS_ENUM(NSInteger) {
  */
 - (void)hideControlBar;
 
+
+/*!
+ @method
+ 	play
+ @abstract
+ 	Resumes the stream that is in paused state.
+ @discussion
+ 	The playback state will be changed to either buffering or playing.
+ */
+- (void)play;
+
+/*!
+ @method
+ 	pause
+ @abstract
+ 	Pauses the stream that is in playing state.
+ @discussion
+ 	The playback state will be changed to paused.
+ */
+- (void)pause;
+
+/*!
+ @method
+ 	destroy
+ @abstract
+ 	Disposes the resources that were used for streaming video.
+ @discussion
+ 	Player state changes to unknown, playback state changes to paused.
+ */
+- (void)destroy;
+
 /*!
  @property
-    delegate
+ 	delegate
  @abstract
-    Indicates object which will receive and process callbacks.
+ 	Indicates object which will receive and process callbacks.
  */
 @property (nonatomic, weak) id<EENMediaPlayerDelegate> delegate;
 
