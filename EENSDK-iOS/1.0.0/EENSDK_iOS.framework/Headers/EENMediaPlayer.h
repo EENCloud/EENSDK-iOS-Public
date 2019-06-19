@@ -49,11 +49,15 @@ typedef NS_ENUM(NSInteger) {
  @constant
     EENMediaPlayerPlaybackStatePlaying
     In this state, playback is currently progressing. Should playback stall because of insufficient media data, playbackState will change to buffering.
+ @constant
+ 	EENMediaPlayerPlaybackStateStopped
+ 	In this state playback has ended and the player is paused. Calling play() or toggle the play button will restart the stream.
  */
 typedef NS_ENUM(NSInteger) {
     EENMediaPlayerPlaybackStatePaused,
     EENMediaPlayerPlaybackStateBuffering,
     EENMediaPlayerPlaybackStatePlaying,
+	EENMediaPlayerPlaybackStateStopped
 } EENMediaPlayerPlaybackState;
 
 @class EENMediaPlayer;
