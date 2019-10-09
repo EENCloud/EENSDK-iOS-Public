@@ -4,7 +4,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EENSDK-iOS'
-  s.version          = '3.0.0'
+  s.version          = '3.1.0'
   s.summary          = 'An FLV player designed specifically to play files from EagleEye Networks.'
   s.license = { :type => 'Proprietary', :text => 'This binary is is not openly licensed to any individual without prior written permission and remains the property of EagleEye Networks, Inc.' }
 
