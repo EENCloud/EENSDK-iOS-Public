@@ -211,7 +211,7 @@ SWIFT_CLASS("_TtC10EENSDK_iOS11EENSDKError")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-typedef SWIFT_ENUM(NSInteger, EENSDKErrorCode, closed) {
+typedef SWIFT_ENUM(NSInteger, EENSDKErrorCode, open) {
 /// <ul>
 ///   <li>
 ///     To be used when a problem occurs that the client is not responsible for. Examples are Databases being offline,
