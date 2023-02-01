@@ -1,0 +1,11 @@
+framework module EENSDK_iOS {
+  umbrella header "EENSDK_iOS.h"
+
+  export *
+  module * { export * }
+}
+
+module EENSDK_iOS.Swift {
+  header "EENSDK_iOS-Swift.h"
+  requires objc
+}
