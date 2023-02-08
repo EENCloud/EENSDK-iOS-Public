@@ -4,7 +4,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EENSDK-iOS'
-  s.version          = '3.2.3'
+  s.version          = '3.2.4'
   s.summary          = 'An FLV player designed specifically to play files from EagleEye Networks.'
   s.license = { :type => 'Proprietary', :text => 'This binary is is not openly licensed to any individual without prior written permission and remains the property of EagleEye Networks, Inc.' }
 
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
 
   s.source = {
-  	:http => 'https://github.com/EENCloud/EENSDK-iOS-Public/blob/master/EENSDK-iOS/1.0.0/EENSDK-iOS.zip?raw=true'
+  	:http => 'https://github.com/EENCloud/EENSDK-iOS-Public/blob/master/EENSDK-iOS/1.0.0/EENSDK_iOS.zip?raw=true'
   }
-  s.vendored_frameworks = 'EENSDK-iOS.xcframework'
+  s.vendored_frameworks = 'EENSDK_iOS.xcframework'
 end
